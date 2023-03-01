@@ -90,6 +90,7 @@ _execute_command('npm install --ignore-scripts')
 # Run the first build
 print('Building initial bundles...')
 
+_execute_command("set NODE_OPTIONS=--openssl-legacy-provider")
 _execute_command('npm run build:js')
 
 # Activating the venv and running the command
